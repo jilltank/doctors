@@ -1,0 +1,11 @@
+<div class="col-md-3">
+	<%= appointment.patient.name %>
+	has an appointment with
+	<%= appointment.doctor.name %>
+	at
+	<%= appointment.appt_time %>
+	<p>
+		<%= link_to "Edit", edit_appointment_path(appointment), remote: true, class: "btn btn-secondary" %>
+		<%= link_to "Delete", appointment, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</p>
+</div>
